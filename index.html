@@ -8,60 +8,87 @@
         body {
             font-family: Arial, sans-serif;
             margin: 0;
-            background: #f2f2f2;
+            background: #f4f4f4;
+            color: #333;
         }
         .container {
-            width: 80%;
             max-width: 900px;
             margin: 40px auto;
-            background: white;
+            background: #fff;
             padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
-        h1 {
-            text-align: center;
-            margin-bottom: 5px;
+        h1, h2 {
+            margin-top: 0;
         }
-        h2 {
-            margin-top: 30px;
+        .photo {
+            width: 160px;
+            height: 160px;
+            background: #ddd;
+            border-radius: 8px;
+            margin-bottom: 20px;
         }
-        .info {
-            text-align: center;
-            color: #555;
+        .header {
+            display: flex;
+            gap: 25px;
+            align-items: center;
         }
         .section {
-            margin-top: 20px;
+            margin-top: 30px;
         }
-        .item {
-            margin-bottom: 8px;
+        .section p {
+            margin: 5px 0;
+        }
+        .info-item {
+            margin: 3px 0;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Hoja de Vida</h1>
-        <div class="info">
-            <p><strong>David Alexander Chasi Jimenez</strong></p>
-            <p>Edad: 22 años</p>
-            <p>Contacto: 0987436836</p>
-            <p>Correo: david.chasi8931@utc.edu.ec</p>
-            <p>Ubicación: Quito, Ecuador</p>
+
+<div class="container">
+
+    <div class="header">
+        <div class="photo">
+            <!-- Aquí puedes insertar tu imagen reemplazando este div por una etiqueta <img> -->
         </div>
-
-        <h2>Perfil Profesional</h2>
-        <p>Estudiante de la Universidad Técnica de Cotopaxi, orientado al desarrollo de soluciones tecnológicas eficientes. Ingeniero en Sistemas de Información con experiencia en proyectos desarrollados en C#, Laravel, Django y Flutter. Conocimientos básicos en administración y manejo de bases de datos MySQL, SQL Server y PostgreSQL. Interesado en seguir ampliando habilidades técnicas y aportar en proyectos de desarrollo de software.</p>
-
-        <h2>Habilidades Técnicas</h2>
-        <div class="section">
-            <div class="item">• Desarrollo en C#</div>
-            <div class="item">• Desarrollo en Laravel</div>
-            <div class="item">• Desarrollo en Django</div>
-            <div class="item">• Desarrollo en Flutter</div>
-            <div class="item">• MySQL</div>
-            <div class="item">• SQL Server</div>
-            <div class="item">• PostgreSQL</div>
+        <div>
+            <h1><strong>David Alexander Chasi Jimenez</strong></h1>
+            <p>Edad: 22 años</p>
         </div>
     </div>
+
+    <div class="section">
+        <h2><strong>Contacto</strong></h2>
+        <p class="info-item">Teléfono: 0987436836</p>
+        <p class="info-item">Correo: david.chasi8931@utc.edu.ec</p>
+        <p class="info-item">Ubicación: Quito, Ecuador</p>
+    </div>
+
+    <div class="section">
+        <h2><strong>Perfil</strong></h2>
+        <p>Estudiante de la Universidad Técnica de Cotopaxi con formación en ingeniería en sistemas de información. Me destaco por la capacidad de analizar problemas y transformarlos en soluciones funcionales mediante el uso de tecnologías modernas. Poseo disciplina, atención al detalle y orientación a resultados en cada proyecto que desarrollo.</p>
+    </div>
+
+    <div class="section">
+        <h2><strong>Experiencia y Tecnologías</strong></h2>
+        <p>Desarrollo de proyectos en:</p>
+        <ul>
+            <li>C#</li>
+            <li>Laravel</li>
+            <li>Django</li>
+            <li>Flutter</li>
+        </ul>
+
+        <p>Experiencia básica en administración y manejo de bases de datos:</p>
+        <ul>
+            <li>MySQL</li>
+            <li>SQL Server</li>
+            <li>PostgreSQL</li>
+        </ul>
+    </div>
+
+</div>
+
 </body>
 </html>
