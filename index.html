@@ -2,45 +2,49 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hoja de Vida - David Alexander Chasi Jimenez</title>
+    <title>Hoja de Vida - David Alexander Chasi Jiménez</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             background: #f4f4f4;
-            color: #333;
+            color: #222;
         }
         .container {
             max-width: 900px;
             margin: 40px auto;
             background: #fff;
             padding: 30px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            box-shadow: 0 0 10px rgba(0,0,0,0.15);
         }
         h1, h2 {
-            margin-top: 0;
-        }
-        .photo {
-            width: 160px;
-            height: 160px;
-            background: #ddd;
-            border-radius: 8px;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
+            color: #222;
         }
         .header {
             display: flex;
-            gap: 25px;
+            gap: 20px;
             align-items: center;
         }
-        .section {
-            margin-top: 30px;
+        .photo {
+            width: 180px;
+            height: 180px;
+            background: #ddd;
+            border: 2px solid #bbb;
+            object-fit: cover;
         }
-        .section p {
+        .info p {
             margin: 5px 0;
         }
-        .info-item {
-            margin: 3px 0;
+        .section {
+            margin-top: 25px;
+        }
+        .section p {
+            line-height: 1.6;
+        }
+        .skills-list li {
+            margin-bottom: 6px;
         }
     </style>
 </head>
@@ -49,39 +53,45 @@
 <div class="container">
 
     <div class="header">
-        <div class="photo">
-            <!-- Aquí puedes insertar tu imagen reemplazando este div por una etiqueta <img> -->
-        </div>
-        <div>
-            <h1><strong>David Alexander Chasi Jimenez</strong></h1>
+        <!-- Foto -->
+        <img src="ruta_de_tu_foto.jpg" alt="Fotografía" class="photo">
+
+        <div class="info">
+            <h1><strong>David Alexander Chasi Jiménez</strong></h1>
             <p>Edad: 22 años</p>
+            <p>Ubicación: Quito, Ecuador</p>
+            <p>Contacto: 0987436836</p>
+            <p>Correo: david.chasi8931@utc.edu.ec</p>
         </div>
     </div>
 
     <div class="section">
-        <h2><strong>Contacto</strong></h2>
-        <p class="info-item">Teléfono: 0987436836</p>
-        <p class="info-item">Correo: david.chasi8931@utc.edu.ec</p>
-        <p class="info-item">Ubicación: Quito, Ecuador</p>
+        <h2><strong>Perfil Profesional</strong></h2>
+        <p>
+            Estudiante de la Universidad Técnica de Cotopaxi, orientado al desarrollo de software con interés en 
+            soluciones eficientes y escalables. Me caracterizo por aprender rápidamente, adaptarme a nuevos entornos 
+            y mantener un enfoque práctico al resolver problemas técnicos.
+        </p>
     </div>
 
     <div class="section">
-        <h2><strong>Perfil</strong></h2>
-        <p>Estudiante de la Universidad Técnica de Cotopaxi con formación en ingeniería en sistemas de información. Me destaco por la capacidad de analizar problemas y transformarlos en soluciones funcionales mediante el uso de tecnologías modernas. Poseo disciplina, atención al detalle y orientación a resultados en cada proyecto que desarrollo.</p>
+        <h2><strong>Formación Académica</strong></h2>
+        <p>Ingeniería en Sistemas de Información – Universidad Técnica de Cotopaxi</p>
     </div>
 
     <div class="section">
-        <h2><strong>Experiencia y Tecnologías</strong></h2>
-        <p>Desarrollo de proyectos en:</p>
-        <ul>
-            <li>C#</li>
-            <li>Laravel</li>
-            <li>Django</li>
-            <li>Flutter</li>
+        <h2><strong>Experiencia y Proyectos</strong></h2>
+        <ul class="skills-list">
+            <li>Desarrollo de aplicaciones en C#.</li>
+            <li>Proyectos web con Laravel.</li>
+            <li>Aplicaciones backend con Django.</li>
+            <li>Interfaces móviles con Flutter.</li>
         </ul>
+    </div>
 
-        <p>Experiencia básica en administración y manejo de bases de datos:</p>
-        <ul>
+    <div class="section">
+        <h2><strong>Bases de Datos</strong></h2>
+        <ul class="skills-list">
             <li>MySQL</li>
             <li>SQL Server</li>
             <li>PostgreSQL</li>
