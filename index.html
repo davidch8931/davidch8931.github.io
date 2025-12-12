@@ -5,17 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hoja de Vida - David Alexander Chasi Jiménez</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
     <style>
         :root {
             --primary-color: #2c3e50;
             --secondary-color: #3498db;
-            --accent-color: #e74c3c;
+            --accent-color: #2980b9;
             --light-color: #f8f9fa;
             --dark-color: #343a40;
             --gray-color: #6c757d;
-            --border-radius: 8px;
-            --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
 
         * {
@@ -29,27 +27,23 @@
             line-height: 1.6;
             color: var(--dark-color);
             background-color: #f5f7fa;
-            padding-bottom: 30px;
+            padding: 20px;
         }
 
         .container {
             max-width: 1100px;
             margin: 0 auto;
-            padding: 0 20px;
+            background-color: white;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            overflow: hidden;
         }
 
         /* Header styles */
         header {
-            background: linear-gradient(135deg, var(--primary-color) 0%, #1a2530 100%);
+            background-color: var(--primary-color);
             color: white;
-            padding: 40px 0;
-            margin-bottom: 40px;
-            border-bottom-left-radius: 30px;
-            border-bottom-right-radius: 30px;
-            box-shadow: var(--box-shadow);
-        }
-
-        .header-content {
+            padding: 30px 40px;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -57,15 +51,15 @@
 
         .personal-info h1 {
             font-family: 'Poppins', sans-serif;
-            font-size: 2.5rem;
-            font-weight: 700;
+            font-size: 2.2rem;
+            font-weight: 600;
             margin-bottom: 5px;
         }
 
         .personal-info h2 {
             font-family: 'Poppins', sans-serif;
-            font-size: 1.5rem;
-            font-weight: 500;
+            font-size: 1.3rem;
+            font-weight: 400;
             color: var(--secondary-color);
             margin-bottom: 15px;
         }
@@ -81,7 +75,7 @@
             display: flex;
             align-items: center;
             gap: 8px;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
         }
 
         .contact-item i {
@@ -89,31 +83,30 @@
         }
 
         .photo-container {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
+            width: 180px;
+            height: 180px;
             overflow: hidden;
-            border: 5px solid var(--secondary-color);
-            box-shadow: var(--box-shadow);
+            border: 3px solid var(--secondary-color);
+            background-color: white;
         }
 
         .photo-placeholder {
             width: 100%;
             height: 100%;
-            background: linear-gradient(45deg, #3498db, #2c3e50);
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            color: white;
+            color: var(--gray-color);
             text-align: center;
-            padding: 20px;
+            padding: 10px;
+            border: 1px dashed #ccc;
         }
 
         .photo-placeholder i {
-            font-size: 3rem;
+            font-size: 2.5rem;
             margin-bottom: 10px;
-            opacity: 0.8;
+            color: var(--gray-color);
         }
 
         /* Main content */
@@ -121,28 +114,20 @@
             display: grid;
             grid-template-columns: 2fr 1fr;
             gap: 30px;
+            padding: 30px;
         }
 
         .card {
-            background-color: white;
-            border-radius: var(--border-radius);
-            padding: 25px;
-            margin-bottom: 30px;
-            box-shadow: var(--box-shadow);
-            transition: transform 0.3s ease;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
+            margin-bottom: 25px;
         }
 
         .card-title {
             font-family: 'Poppins', sans-serif;
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             font-weight: 600;
             color: var(--primary-color);
-            margin-bottom: 20px;
-            padding-bottom: 10px;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
             border-bottom: 2px solid var(--secondary-color);
             display: flex;
             align-items: center;
@@ -156,53 +141,35 @@
         /* About me section */
         .about-text {
             text-align: justify;
-            font-size: 1.05rem;
+            font-size: 1rem;
         }
 
         /* Education section */
         .education-item {
-            margin-bottom: 20px;
-            padding-bottom: 15px;
-            border-bottom: 1px dashed #eee;
-        }
-
-        .education-item:last-child {
-            margin-bottom: 0;
-            padding-bottom: 0;
-            border-bottom: none;
+            margin-bottom: 15px;
         }
 
         .education-item h3 {
             font-family: 'Poppins', sans-serif;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             color: var(--dark-color);
             margin-bottom: 5px;
-        }
-
-        .education-date {
-            display: inline-block;
-            background-color: var(--secondary-color);
-            color: white;
-            padding: 3px 10px;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            margin-bottom: 8px;
         }
 
         /* Skills section */
         .skills-container {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 15px;
+            grid-template-columns: 1fr;
+            gap: 10px;
         }
 
         .skill-category {
-            margin-bottom: 15px;
+            margin-bottom: 10px;
         }
 
         .skill-category h4 {
             font-family: 'Poppins', sans-serif;
-            font-size: 1.1rem;
+            font-size: 1rem;
             color: var(--primary-color);
             margin-bottom: 8px;
         }
@@ -211,17 +178,10 @@
             display: inline-block;
             background-color: #e9f5fe;
             color: var(--secondary-color);
-            padding: 5px 12px;
-            border-radius: 20px;
+            padding: 4px 10px;
+            border-radius: 3px;
             margin: 0 5px 8px 0;
-            font-size: 0.9rem;
-            border: 1px solid #c2e0ff;
-        }
-
-        .skill-tag.highlight {
-            background-color: #ffeaea;
-            color: var(--accent-color);
-            border: 1px solid #ffc9c9;
+            font-size: 0.85rem;
         }
 
         /* Projects section */
@@ -233,51 +193,49 @@
 
         .project-item {
             padding: 15px;
-            border-left: 4px solid var(--secondary-color);
+            border-left: 3px solid var(--secondary-color);
             background-color: #f8fafc;
-            border-radius: 0 var(--border-radius) var(--border-radius) 0;
         }
 
         .project-item h4 {
             font-family: 'Poppins', sans-serif;
             font-size: 1.1rem;
-            margin-bottom: 5px;
+            margin-bottom: 8px;
             color: var(--primary-color);
         }
 
         .project-tech {
             display: flex;
             flex-wrap: wrap;
-            gap: 8px;
-            margin: 10px 0;
+            gap: 5px;
+            margin: 8px 0;
         }
 
         .tech-tag {
             background-color: #e9ecef;
             color: var(--gray-color);
-            padding: 3px 10px;
-            border-radius: 15px;
+            padding: 2px 8px;
+            border-radius: 3px;
             font-size: 0.8rem;
         }
 
         .project-links {
             display: flex;
-            gap: 15px;
+            flex-wrap: wrap;
+            gap: 10px;
             margin-top: 10px;
         }
 
         .project-link {
             color: var(--secondary-color);
             text-decoration: none;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             display: flex;
             align-items: center;
             gap: 5px;
-            transition: color 0.3s;
         }
 
         .project-link:hover {
-            color: var(--primary-color);
             text-decoration: underline;
         }
 
@@ -286,8 +244,8 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 15px;
-            padding-bottom: 15px;
+            margin-bottom: 12px;
+            padding-bottom: 12px;
             border-bottom: 1px dashed #eee;
         }
 
@@ -298,18 +256,17 @@
         .language-level {
             background-color: var(--primary-color);
             color: white;
-            padding: 3px 12px;
-            border-radius: 15px;
-            font-size: 0.85rem;
+            padding: 2px 10px;
+            border-radius: 3px;
+            font-size: 0.8rem;
         }
 
         /* Footer */
         footer {
             text-align: center;
-            margin-top: 40px;
             padding: 20px;
             color: var(--gray-color);
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             border-top: 1px solid #eee;
         }
 
@@ -318,130 +275,126 @@
             .main-content {
                 grid-template-columns: 1fr;
             }
-            
-            .skills-container {
-                grid-template-columns: 1fr;
-            }
         }
 
         @media (max-width: 768px) {
-            .header-content {
+            header {
                 flex-direction: column;
                 text-align: center;
-                gap: 30px;
+                gap: 20px;
+                padding: 20px;
+            }
+            
+            .personal-info h1 {
+                font-size: 1.8rem;
+            }
+            
+            .personal-info h2 {
+                font-size: 1.1rem;
             }
             
             .contact-info {
                 justify-content: center;
             }
             
-            .personal-info h1 {
-                font-size: 2rem;
-            }
-            
-            .personal-info h2 {
-                font-size: 1.3rem;
+            .main-content {
+                padding: 20px;
             }
         }
     </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div class="header-content">
-                <div class="personal-info">
-                    <h1>David Alexander Chasi Jiménez</h1>
-                    <h2>Ingeniero en Sistemas de Información</h2>
-                    
-                    <div class="contact-info">
-                        <div class="contact-item">
-                            <i class="fas fa-phone-alt"></i>
-                            <span>0987436836</span>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-envelope"></i>
-                            <span>david.chasi8931@utc.edu.ec</span>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>Quito, Ecuador</span>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-user"></i>
-                            <span>22 años</span>
-                        </div>
-                    </div>
-                </div>
+    <div class="container">
+        <header>
+            <div class="personal-info">
+                <h1>David Alexander Chasi Jiménez</h1>
+                <h2>Ingeniero en Sistemas de Información</h2>
                 
-                <div class="photo-container">
-                    <div class="photo-placeholder">
-                        <i class="fas fa-user-circle"></i>
-                        <p>Foto profesional</p>
-                        <small>(Reemplazar con imagen JPG)</small>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <span>0987436836</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>david.chasi8931@utc.edu.ec</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Quito, Ecuador</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-user"></i>
+                        <span>22 años</span>
                     </div>
                 </div>
             </div>
-        </div>
-    </header>
-    
-    <main class="container">
-        <div class="main-content">
+            
+            <div class="photo-container">
+                <div class="photo-placeholder">
+                    <i class="fas fa-user-circle"></i>
+                    <p>Foto (cuadrado)</p>
+                </div>
+            </div>
+        </header>
+        
+        <main class="main-content">
             <div class="left-column">
                 <section class="card">
                     <h2 class="card-title"><i class="fas fa-user"></i> Perfil Profesional</h2>
                     <div class="about-text">
-                        <p>Ingeniero en Sistemas de Información con sólidos conocimientos en desarrollo de software y gestión de bases de datos. Apasionado por la tecnología y el aprendizaje continuo, con experiencia en el desarrollo de aplicaciones web y móviles utilizando tecnologías modernas como C#, Laravel, Django y Flutter.</p>
-                        <p>Me caracterizo por ser un profesional proactivo, con capacidad para trabajar en equipo y adaptarme rápidamente a nuevos entornos tecnológicos. Busco oportunidades para contribuir en proyectos desafiantes donde pueda aplicar mis conocimientos y continuar desarrollándome profesionalmente.</p>
+                        <p>Estudiante de Ingeniería en Sistemas de Información en la Universidad Técnica de Cotopaxi, con sólidos conocimientos en desarrollo de software y gestión de bases de datos. Tengo experiencia en el desarrollo de aplicaciones web y móviles utilizando tecnologías modernas como C#, Laravel, Django y Flutter.</p>
+                        <p>Me apasiona la resolución de problemas mediante el desarrollo de software eficiente y escalable. Soy una persona dedicada, con capacidad para trabajar en equipo y aprender rápidamente nuevas tecnologías. Busco oportunidades para aplicar mis conocimientos en proyectos desafiantes y continuar mi desarrollo profesional en el área de tecnología.</p>
                     </div>
                 </section>
                 
                 <section class="card">
-                    <h2 class="card-title"><i class="fas fa-briefcase"></i> Experiencia en Proyectos</h2>
+                    <h2 class="card-title"><i class="fas fa-briefcase"></i> Proyectos Destacados</h2>
                     <div class="project-list">
                         <div class="project-item">
                             <h4>Sistema de Adopción de Mascotas</h4>
                             <div class="project-tech">
                                 <span class="tech-tag">Django</span>
                                 <span class="tech-tag">PostgreSQL</span>
-                                <span class="tech-tag">HTML/CSS</span>
+                                <span class="tech-tag">Python</span>
                             </div>
-                            <p>Plataforma web para facilitar la adopción de mascotas, con gestión de usuarios, catálogo de animales y sistema de solicitudes.</p>
+                            <p>Plataforma web para facilitar el proceso de adopción de mascotas, con gestión de perfiles de animales, usuarios y solicitudes de adopción.</p>
                             <div class="project-links">
                                 <a href="https://github.com/CristianRR21/adoption_pet.git" target="_blank" class="project-link">
-                                    <i class="fab fa-github"></i> GitHub
+                                    <i class="fab fa-github"></i> GitHub: adoption_pet
                                 </a>
                                 <a href="https://gitlab.com/cristianleninro/adoption_pets.git" target="_blank" class="project-link">
-                                    <i class="fab fa-gitlab"></i> GitLab
+                                    <i class="fab fa-gitlab"></i> GitLab: adoption_pets
                                 </a>
                             </div>
                         </div>
                         
                         <div class="project-item">
-                            <h4>Sistema Universitario CHC</h4>
+                            <h4>Sistema Universitario con Django</h4>
                             <div class="project-tech">
                                 <span class="tech-tag">Django</span>
                                 <span class="tech-tag">MySQL</span>
-                                <span class="tech-tag">Bootstrap</span>
+                                <span class="tech-tag">HTML/CSS</span>
                             </div>
-                            <p>Sistema de gestión académica para instituciones educativas, con módulos de estudiantes, profesores y administración.</p>
+                            <p>Sistema de gestión académica para instituciones educativas con módulos de estudiantes, profesores, cursos y calificaciones.</p>
                             <div class="project-links">
                                 <a href="https://github.com/davidch8931/djangoUniversidadCHC.git" target="_blank" class="project-link">
-                                    <i class="fab fa-github"></i> GitHub
+                                    <i class="fab fa-github"></i> GitHub: djangoUniversidadCHC
                                 </a>
                             </div>
                         </div>
                         
                         <div class="project-item">
-                            <h4>Plataforma Turística</h4>
+                            <h4>Plataforma Turística con Laravel</h4>
                             <div class="project-tech">
                                 <span class="tech-tag">Laravel</span>
                                 <span class="tech-tag">MySQL</span>
-                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">PHP</span>
                             </div>
-                            <p>Aplicación web para la promoción de destinos turísticos, con reservas en línea, galería multimedia y sistema de recomendaciones.</p>
+                            <p>Aplicación web para la promoción de destinos turísticos con sistema de reservas, galerías y recomendaciones personalizadas.</p>
                             <div class="project-links">
                                 <a href="https://github.com/davidch8931/larTuristico.git" target="_blank" class="project-link">
-                                    <i class="fab fa-github"></i> GitHub
+                                    <i class="fab fa-github"></i> GitHub: larTuristico
                                 </a>
                             </div>
                         </div>
@@ -451,10 +404,9 @@
                 <section class="card">
                     <h2 class="card-title"><i class="fas fa-graduation-cap"></i> Formación Académica</h2>
                     <div class="education-item">
-                        <span class="education-date">Actualmente</span>
                         <h3>Ingeniería en Sistemas de Información</h3>
                         <p>Universidad Técnica de Cotopaxi</p>
-                        <p>Formación en desarrollo de software, gestión de proyectos tecnológicos, bases de datos y arquitectura de sistemas.</p>
+                        <p>Estudiante activo - En proceso de formación en desarrollo de software, gestión de proyectos, bases de datos y arquitectura de sistemas.</p>
                     </div>
                 </section>
             </div>
@@ -468,14 +420,14 @@
                             <span class="skill-tag">C#</span>
                             <span class="skill-tag">Python</span>
                             <span class="skill-tag">PHP</span>
-                            <span class="skill-tag">Dart</span>
+                            <span class="skill-tag">JavaScript</span>
                         </div>
                         
                         <div class="skill-category">
-                            <h4>Frameworks & Librerías</h4>
-                            <span class="skill-tag highlight">Laravel</span>
-                            <span class="skill-tag highlight">Django</span>
-                            <span class="skill-tag highlight">Flutter</span>
+                            <h4>Frameworks</h4>
+                            <span class="skill-tag">Laravel</span>
+                            <span class="skill-tag">Django</span>
+                            <span class="skill-tag">Flutter</span>
                             <span class="skill-tag">.NET</span>
                         </div>
                         
@@ -488,10 +440,10 @@
                         
                         <div class="skill-category">
                             <h4>Herramientas</h4>
-                            <span class="skill-tag">Git/GitHub</span>
+                            <span class="skill-tag">Git</span>
+                            <span class="skill-tag">GitHub</span>
                             <span class="skill-tag">GitLab</span>
                             <span class="skill-tag">VS Code</span>
-                            <span class="skill-tag">Visual Studio</span>
                         </div>
                     </div>
                 </section>
@@ -510,64 +462,48 @@
                 
                 <section class="card">
                     <h2 class="card-title"><i class="fab fa-github"></i> Repositorios</h2>
-                    <p>Puedes explorar mis proyectos de código abierto en las siguientes plataformas:</p>
-                    <div class="project-links" style="margin-top: 15px;">
-                        <a href="https://github.com/davidch8931" target="_blank" class="project-link">
-                            <i class="fab fa-github"></i> GitHub Profile
+                    <div class="project-links" style="flex-direction: column; align-items: flex-start; gap: 8px;">
+                        <a href="https://github.com/CristianRR21/adoption_pet.git" target="_blank" class="project-link">
+                            <i class="fab fa-github"></i> adoption_pet (GitHub)
                         </a>
-                        <a href="https://gitlab.com/cristianleninro" target="_blank" class="project-link">
-                            <i class="fab fa-gitlab"></i> GitLab Profile
+                        <a href="https://github.com/davidch8931/djangoUniversidadCHC.git" target="_blank" class="project-link">
+                            <i class="fab fa-github"></i> djangoUniversidadCHC (GitHub)
+                        </a>
+                        <a href="https://github.com/davidch8931/larTuristico.git" target="_blank" class="project-link">
+                            <i class="fab fa-github"></i> larTuristico (GitHub)
+                        </a>
+                        <a href="https://gitlab.com/cristianleninro/adoption_pets.git" target="_blank" class="project-link">
+                            <i class="fab fa-gitlab"></i> adoption_pets (GitLab)
                         </a>
                     </div>
                 </section>
                 
                 <section class="card">
-                    <h2 class="card-title"><i class="fas fa-certificate"></i> Certificaciones</h2>
-                    <div class="education-item">
-                        <h3>Desarrollo Web con Django</h3>
-                        <p>Plataforma de cursos online</p>
-                        <small>2023</small>
-                    </div>
-                    <div class="education-item">
-                        <h3>Fundamentos de C#</h3>
-                        <p>Microsoft Learn</p>
-                        <small>2022</small>
+                    <h2 class="card-title"><i class="fas fa-database"></i> Experiencia en BD</h2>
+                    <div class="skills-container">
+                        <div class="skill-category">
+                            <h4>Bases de Datos Relacionales</h4>
+                            <span class="skill-tag">MySQL (Básico)</span>
+                            <span class="skill-tag">SQL Server (Básico)</span>
+                            <span class="skill-tag">PostgreSQL (Básico)</span>
+                        </div>
+                        <p style="font-size: 0.9rem; margin-top: 5px;">Experiencia básica en diseño, creación y consultas de bases de datos relacionales para aplicaciones web.</p>
                     </div>
                 </section>
             </div>
-        </div>
-    </main>
-    
-    <footer>
-        <div class="container">
-            <p>© 2023 David Alexander Chasi Jiménez. Todos los derechos reservados.</p>
-            <p>Esta hoja de vida está diseñada para GitHub Pages.</p>
-        </div>
-    </footer>
-    
+        </main>
+        
+        <footer>
+            <p>© 2023 David Alexander Chasi Jiménez - Ingeniero en Sistemas de Información</p>
+            <p>Hoja de vida diseñada para GitHub Pages</p>
+        </footer>
+    </div>
+
     <script>
-        // Efecto de animación al hacer scroll
+        // Actualizar año en el footer
         document.addEventListener('DOMContentLoaded', function() {
-            const cards = document.querySelectorAll('.card');
-            
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.style.opacity = '1';
-                        entry.target.style.transform = 'translateY(0)';
-                    }
-                });
-            }, { threshold: 0.1 });
-            
-            cards.forEach(card => {
-                card.style.opacity = '0';
-                card.style.transform = 'translateY(20px)';
-                card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-                observer.observe(card);
-            });
-            
-            // Actualizar año en el footer
-            document.querySelector('footer p').innerHTML = `© ${new Date().getFullYear()} David Alexander Chasi Jiménez. Todos los derechos reservados.`;
+            const yearSpan = document.querySelector('footer p');
+            yearSpan.textContent = yearSpan.textContent.replace('2023', new Date().getFullYear());
         });
     </script>
 </body>
